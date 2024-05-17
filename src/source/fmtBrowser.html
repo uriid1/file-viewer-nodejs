@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/source/img/favicon.ico" type="image/x-icon">
+  <title>Файловый сервер</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0px;
+      padding: 0px;
+      background: linear-gradient(-45deg, #212a36, #1f2844);
+    }
+    .path {
+      padding-bottom: 10px;
+      padding-left: 10px;
+      color: #0faaaf;
+    }
+    .win {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: normal;
+      flex-direction: row;
+    }
+    .container a:link {
+      text-decoration: none;
+      color: #c7daff;
+    }
+    .container a:visited {
+      text-decoration: none;
+      color: #c7daff;
+    }
+    .item {
+      min-width: 32px;
+      margin: 5px;
+      height: auto;
+      padding: 10px;
+      cursor: pointer;
+
+      display: flex;
+      /*justify-content: end;*/
+      flex-direction: column;
+      align-items: center;
+
+      /* Выравнивание текста */
+      text-align: center;
+      overflow-wrap: anywhere;
+      overflow: hidden;
+    }
+    /* Для ПК */
+    @media (min-width: 768px) {
+      .item {
+        width: 128px;
+      }
+    }
+    /* Для телефонов */
+    @media (max-width: 767px) {
+      .item {
+        width: 128px;
+        padding: 5px;
+      }
+    }
+    .item:hover p {
+      background: #303582;
+    }
+    .item p {
+      padding: 10px;
+      margin: 0px;
+    }
+    .item img {
+      padding-bottom: 10px;
+      max-width: 64px;
+      height: auto;
+      margin-bottom: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="path">
+    <h1>$path</h1>
+  </div>
+  <div class="win">
+    <div class="container">
+      $content
+    </div>
+  </div>
+</body>
+</html>
+ 
